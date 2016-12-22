@@ -1,0 +1,87 @@
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header.main-header {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+}
+
+header.main-header > figure {
+    width: auto;
+    height: 100%;
+    float: left;
+    margin: 0px;
+    background-color: blue;
+}
+
+header.main-header > figure > img {
+    width: auto;
+    height: 100%;
+}
+
+header.main-header > nav {
+    width: auto;
+    height: 100%;
+    float: right;
+    background-color: gray;
+}
+
+header.main-header > nav > a {
+    width: auto;
+    height: 100%;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    background-color: green;
+    display: inline-block;
+}
+
+header.main-header > nav > a > i {
+    color: #fff;
+}
+
+section.info {
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+
+section.info > div.item {
+    width: 25%;
+    height:100%;
+    float: left;
+    position: relative;
+}
+
+section.info > div.item > figure {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.info > div.item > figure > img {
+    width: auto;
+    height: 100%;
+}
+
+section.info > div.item > div.titulo {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 15%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer.main-footer {
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+}
