@@ -4,6 +4,7 @@ body {
     padding: 0px;
 }
 
+/* barra superior, menú principal */
 header.main-header {
     width: 100%;
     height: 100px;
@@ -83,9 +84,10 @@ header.main-header > nav > a:hover > span {
     opacity: 1;
 }
 
+/* página de home */
 section.info {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 60px);
     background-color: red;
 }
 
@@ -125,7 +127,7 @@ section.info > div.item > figure > img {
 section.info > div.item > div.titulo {
     left: 0px;
     right: 0px;
-    bottom: -80px;
+    bottom: -60px;
     height: 100px;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
@@ -135,27 +137,82 @@ section.info > div.item > div.titulo {
 }
 
 section.info > div.item:hover > div.titulo {
-    bottom: -40px;
+    bottom: 0px;
     transition: 800ms;
     opacity: 1;
 }
 
-
-section.info > div.item > div.titulo > h6 {
+section.info > div.item > div.titulo > a {
     display: flex;
     align-items: center;
     height: 100%;
     margin: 0px;
     color: #fff;
     font-size: 50px;
+    font-weight: 600;
     font-family: century gothic;
+    text-decoration: none;
 }
 
+/* página de rock */
+section.rock {
+    width: 100%;
+    height: auto;
+}
+
+section.rock > figure.home {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+section.rock > figure.home:before {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.rock > figure.home > img {
+    width: 100%;
+    height: auto;
+}
+
+section.rock > figure.home > h6 {
+    width: auto;
+    height: 150px;
+    position: absolute;
+    margin: auto;
+    font-size: 100px;
+    font-weight: 600px;
+    font-family: century gothic;
+    text-transform: uppercase;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* barra de reproducto de música */
 section.musicbar {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    height: 80px;
+    height: 60px;
     position: fixed;
 }
 
@@ -187,7 +244,6 @@ section.musicbar > div.playcontrol > a:hover {
     background-color: #fff;
     transition: 800ms;
 }
-
 
 section.musicbar > div.playcontrol > a > i {
     color: #3b3b3b;
@@ -272,11 +328,12 @@ section.musicbar > div.close > a > i {
     color: #fff;
 }
 
+/* pie de página */
 footer.main-footer {
     width: 100%;
     height: auto;
     background-color: #000;
-    padding: 20px;
+    padding: 20px 20px 80px 20px;
     box-sizing: border-box;
 }
 
