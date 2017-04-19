@@ -207,6 +207,158 @@ section.rock > figure.home > h6 {
     justify-content: center;
 }
 
+/* Pagina de hard rock*/
+section.hardrock {
+    width: 100%;
+    height: auto;
+}
+
+section.hardrock > figure.home {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+section.hardrock > figure.home:before {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.hardrock > figure.home > img {
+    width: 100%;
+    height: auto;
+}
+
+section.hardrock > figure.home > h6 {
+    width: auto;
+    height: 150px;
+    position: absolute;
+    margin: auto;
+    font-size: 100px;
+    font-weight: 600px;
+    font-family: century gothic;
+    text-transform: uppercase;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* pagina de heavy metal */
+section.heavy {
+    width: 100%;
+    height: auto;
+}
+
+section.heavy > figure.home {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+section.heavy > figure.home:before {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+}
+section.hardrock > figure.home > img {
+    width: 100%;
+    height: auto;
+}
+
+section.heavy > figure.home > h6 {
+    width: auto;
+    height: 150px;
+    position: absolute;
+    margin: auto;
+    font-size: 100px;
+    font-weight: 600px;
+    font-family: century gothic;
+    text-transform: uppercase;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* pagina de trash metal */
+section.trash {
+    width: 100%;
+    height: auto;
+}
+section.trash > figure.home {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+section.trash > figure.home:before {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.trash > figure.home > img {
+    width: 100%;
+    height: auto;
+}
+
+section.trash > figure.home > h6 {
+    width: auto;
+    height: 150px;
+    position: absolute;
+    margin: auto;
+    font-size: 100px;
+    font-weight: 600px;
+    font-family: century gothic;
+    text-transform: uppercase;
+    padding: 0px 40px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* barra de reproducto de música */
 section.musicbar {
     left: 0px;
