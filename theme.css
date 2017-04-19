@@ -7,7 +7,9 @@ body {
 header.main-header {
     width: 100%;
     height: 100px;
+    position: fixed;
     background-color: #000;
+    z-index: 100;
 }
 
 header.main-header > figure {
@@ -15,7 +17,6 @@ header.main-header > figure {
     height: 100%;
     float: left;
     margin: 0px;
-    background-color: blue;
 }
 
 header.main-header > figure > img {
@@ -27,20 +28,59 @@ header.main-header > nav {
     width: auto;
     height: 100%;
     float: right;
-    background-color: gray;
 }
 
 header.main-header > nav > a {
     width: auto;
     height: 100%;
-    padding: 0px 40px;
+    padding: 0px 20px;
+    background-color: #c21e0a;
     box-sizing: border-box;
-    background-color: green;
-    display: inline-block;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 800ms;
+    position: relative;
+}
+
+header.main-header > nav > a:hover {
+    background-color: #fff;
+    transition: 800ms;
+
 }
 
 header.main-header > nav > a > i {
     color: #fff;
+    font-size: 60px;
+    transition: 800ms;
+}
+
+header.main-header > nav > a:hover > i {
+    color: #000;
+    transition: 800ms;
+}
+
+header.main-header > nav > a > span {
+    left: 0px;
+    right: 0px;
+    bottom: -60px;
+    height: 40px;
+    position: absolute;
+    background-color: #c21e0a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 800ms;
+    opacity: 0;
+}
+
+header.main-header > nav > a:hover > span {
+    bottom: -40px;
+    transition: 800ms;
+    opacity: 1;
 }
 
 section.info {
@@ -60,10 +100,21 @@ section.info > div.item > figure {
     width: 100%;
     height: 100%;
     margin: 0px;
+    position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+section.info > div.item > figure:before {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 section.info > div.item > figure > img {
@@ -74,14 +125,165 @@ section.info > div.item > figure > img {
 section.info > div.item > div.titulo {
     left: 0px;
     right: 0px;
-    bottom: 0px;
-    height: 15%;
+    bottom: -80px;
+    height: 100px;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0px 0px 0px 20px;
+    transition: 800ms;
+    opacity: 0;
+}
+
+section.info > div.item:hover > div.titulo {
+    bottom: -40px;
+    transition: 800ms;
+    opacity: 1;
+}
+
+
+section.info > div.item > div.titulo > h6 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0px;
+    color: #fff;
+    font-size: 50px;
+    font-family: century gothic;
+}
+
+section.musicbar {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 80px;
+    position: fixed;
+}
+
+section.musicbar > div.playcontrol {
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(77,78,78,0.8);
+}
+
+section.musicbar > div.playcontrol > a {
+    display: inline-block;
+    padding: 5px;
+    background-color: #dadada;
+    text-decoration: none;
+    margin: 0px 5px;
+    transition: 800ms;
+    border-radius: 50%;
+}
+
+section.musicbar > div.playcontrol > a.play {
+    padding: 13px;
+}
+
+section.musicbar > div.playcontrol > a:hover {
+    background-color: #fff;
+    transition: 800ms;
+}
+
+
+section.musicbar > div.playcontrol > a > i {
+    color: #3b3b3b;
+}
+
+section.musicbar > div.progresbar {
+    padding: 15px;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: rgba(49,52,54,0.8);
+}
+
+section.musicbar > div.progresbar > figure,
+section.musicbar > div.progresbar > figure > img {
+    width: auto;
+    height: 100%;
+    margin: 0px;
+    float: left;
+}
+
+section.musicbar > div.progresbar > div.buttons {
+    width: auto;
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.musicbar > div.progresbar > div.buttons > a {
+    text-decoration: none;
+    transition: 800ms;
+    margin: 0px 2px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+section.musicbar > div.progresbar > div.buttons > a:hover {
+    background-color: #484848;
+    transition: 800ms;
+}
+
+section.musicbar > div.progresbar > div.buttons > a > i {
+    color: 	#A0A0A0;
+    font-size: 18px;
+}
+
+section.musicbar > div.soundcontrol {
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: rgba(88,85,79,0.8);
+}
+
+section.musicbar > div.close {
+    width: 10%;
+    height: 100%;
+    float: left;
+    background-color: rgba(255,255,255,0.3);
+}
+
+section.musicbar > div.close > a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    transition: 800ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section.musicbar > div.close > a:hover {
+    background-color: rgba(56,56,56,0.5);
+    transition: 800ms;
+}
+
+section.musicbar > div.close > a > i {
+    color: #fff;
 }
 
 footer.main-footer {
     width: 100%;
-    height: 100px;
-    background-color: blue;
+    height: auto;
+    background-color: #000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer.main-footer > h6 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0px;
+    font-family: century gothic;
+    font-weight: 100;
 }
