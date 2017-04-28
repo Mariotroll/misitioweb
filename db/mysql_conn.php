@@ -1,8 +1,19 @@
 <?php
-// Conectando, seleccionando la base de datos
-$link = mysql_connect('localhost', 'root', '') or die('No se pudo conectar: ' . mysql_error());
-mysql_select_db('misitioweb') or die('No se pudo seleccionar la base de datos');
-echo 'Connected successfully';
+
+class Conexion
+{
+    public static function conn()
+    {
+        $conexion = new mysqli("localhost", "root", "", "misitioweb");
+        $conexion->query("SET NAMES 'utf8'");
+        return $conexion;
+    }
+}
+
+// // Conectando, seleccionando la base de datos
+// $link = mysql_connect('localhost', 'root', '') or die('No se pudo conectar: ' . mysql_error());
+// mysql_select_db('misitioweb') or die('No se pudo seleccionar la base de datos');
+// echo 'Connected successfully';
 
 // Realizar una consulta MySQL
 // $insert = 'INSERT INTO usuarios (usuario, contrasena) VALUES ("noche", "123456")';
@@ -32,5 +43,5 @@ echo 'Connected successfully';
 // mysql_free_result($select_result);
 
 // Cerrar la conexión
-mysql_close($link);
+// mysql_close($link);
 ?>

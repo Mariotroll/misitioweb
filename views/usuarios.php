@@ -3,10 +3,10 @@
     <head>
         <title>Mario</title>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="theme.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/theme.css" type="text/css" media="all" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="jquery-2.1.4.min.js"></script>
-        <script src="custom.js"></script>
+        <script src="js/custom.js"></script>
     </head>
     <body>
         <header class="main-header">
@@ -21,11 +21,12 @@
             </nav>
         </header>
 
-        <form class="login" action="login.php" method="post">
-            <input type="text" name="usuario" value="" placeholder="Usuario">
-            <input type="paasword" name="contrasena" value="" placeholder="Contraseña">
-            <button type="submit">Aceptar</button>
-        </form>
+        <?php
+        foreach ($usuarios as $usuario)
+        {
+            echo $usuario["usuario"] . "<br>";
+        }
+        ?>
 
         <footer class="main-footer">
             <h6>Mario Gustavo Lopez Gonzalez</h6>
